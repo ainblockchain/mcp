@@ -1,0 +1,23 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "MCP Server for AI Network",
+  "main": "dist/index.js",
+  "repository": "git@github.com:ainblockchain/mcp.git",
+  "author": "Seonghwa Yun <seonghwa.yun@comcom.ai>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && chmod 755 dist/index.js",
+    "dev": "tsc && npx @modelcontextprotocol/inspector node dist/index.js",
+    "start": "tsc && node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@ainblockchain/ain-js": "^1.13.3",
+    "@modelcontextprotocol/sdk": "^1.10.1",
+    "zod": "^3.24.3"
+  }
+}
