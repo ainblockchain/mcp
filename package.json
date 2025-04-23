@@ -16,7 +16,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@ainblockchain/ain-js": "^1.13.3",
+    "@ainblockchain/ain-js": "file:/Users/shyun/comcom/github/ain-js",
     "@modelcontextprotocol/sdk": "^1.10.1",
     "zod": "^3.24.3"
   }

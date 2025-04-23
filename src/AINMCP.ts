@@ -1,5 +1,4 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import AIN from "@ainblockchain/ain-js";
 
 import { MCP_SERVER_CONFIG } from "./config";
 import { Tools } from "./tools";
@@ -24,8 +23,8 @@ class AINMCP extends McpServer {
       this.tool(
         tool.name,
         tool.description,
-        tool.args,
-        async () => tool.handler(tool.args, this.getToolContext())
+        tool.parameters.shape,
+        async (args, extra) => tool.handler(args, this.getToolContext())
       );
     });
   }

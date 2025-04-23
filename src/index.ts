@@ -4,6 +4,7 @@ import AINMCP from "./AINMCP";
 async function main() {
   const server = new AINMCP();
   const transport = new StdioServerTransport();
+  server.registerTools();
 
   await server.connect(transport);
 }
