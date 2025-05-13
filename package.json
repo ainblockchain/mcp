@@ -18,6 +18,7 @@
   "dependencies": {
     "@ainblockchain/ain-js": "file:/Users/shyun/comcom/github/ain-js",
     "@modelcontextprotocol/sdk": "^1.10.1",
+    "dotenv": "^16.5.0",
     "zod": "^3.24.3"
   }
 }
