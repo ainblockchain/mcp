@@ -17,8 +17,9 @@ export const getValue: ToolType<typeof parameters> = {
       return {
         content: [{ type: 'text', text: JSON.stringify(result)}]
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error(error);
+      throw new Error(error.message);
     }
   }
 }
