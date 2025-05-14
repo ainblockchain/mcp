@@ -3,17 +3,20 @@ import { z } from 'zod';
 import { ToolContext, ToolType } from '../types';
 
 const parameters = z.object({
-  path: z.string().min(1)
+  path: z.string().min(1),
+  value: z.any()
 });
 
-export const getValue: ToolType<typeof parameters> = {
-  name: 'get-value',
-  description: 'Get the value of a path from the database on AI Network',
+export const setValue: ToolType<typeof parameters> = {
+  name: 'set-value',
+  description: 'Set a value to a specific path in the AI Network database',
   parameters,
   handler: async (params: z.infer<typeof parameters>, context: ToolContext) => {
     const { ain } = context;
     try {
-      const result = await ain.db.ref(params.path).getValue();
+      const result = await ain.db.ref(params.path).setValue({
+        value: params.value
+      });
       return {
         content: [{ type: 'text', text: JSON.stringify(result)}]
       }

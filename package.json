@@ -16,7 +16,9 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@ainblockchain/ain-js": "^1.13.3",
     "@modelcontextprotocol/sdk": "^1.10.1",
+    "dotenv": "^16.5.0",
     "zod": "^3.24.3"
   }
 }

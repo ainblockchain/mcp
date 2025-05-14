@@ -1,7 +1,8 @@
 import { z } from "zod";
+import AIN from "@ainblockchain/ain-js";
 
 export interface ToolContext {
-  // ain: AIN;
+  ain: AIN;
 }
 
 export interface ToolType<P extends z.ZodType> {
