@@ -41,7 +41,13 @@ Add the following to your `claude_desktop_config.json`.
   "mcpServers": {
     "ainetwork": {
       "command": "node",
-      "args": ["<path to dist/index.js>"]
+      "args": ["<path to dist/index.js>"],
+      "env": [
+        "PROVIDER_URL": "<>",
+        "EVENT_HANDLER_URL": "<>",
+        "CHAIN_ID": "<>",
+        "AIN_PRIVATE_KEY": "<>"
+      ]
     }
   }
 }
