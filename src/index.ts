@@ -1,3 +1,4 @@
+import "./log";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import AINMCP from "./AINMCP";
 
