@@ -10,7 +10,7 @@ export const MCP_SERVER_CONFIG = {
   providerUrl: process.env.PROVIDER_URL || 'https://testnet-api.ainetwork.ai',
   eventHandlerUrl: process.env.EVENT_HANDLER_URL || 'wss://testnet-api.ainetwork.ai',
   chainId: process.env.CHAIN_ID || '0',
-  privateKey: process.env.PRIVATE_KEY || '',
+  privateKey: process.env.AIN_PRIVATE_KEY || '',
 } as const;
 
 export type ServerConfig = typeof MCP_SERVER_CONFIG;

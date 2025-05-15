@@ -17,6 +17,12 @@ export const setValue: ToolType<typeof parameters> = {
       const result = await ain.db.ref(params.path).setValue({
         value: params.value
       });
+      if (result.result.code !== 0) {
+        return {
+          content: [{ type: 'text', text: result.result.message }],
+          isError: true
+        }
+      }
       return {
         content: [{ type: 'text', text: JSON.stringify(result)}]
       }

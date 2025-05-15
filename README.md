@@ -41,11 +41,21 @@ Add the following to your `claude_desktop_config.json`.
   "mcpServers": {
     "ainetwork": {
       "command": "node",
-      "args": ["<path to dist/index.js>"]
+      "args": ["<path to dist/index.js>"],
+      "env": [
+        "PROVIDER_URL": "<>",
+        "EVENT_HANDLER_URL": "<>",
+        "CHAIN_ID": "<>",
+        "AIN_PRIVATE_KEY": "<>"
+      ]
     }
   }
 }
 ```
+If `PROVIDER_URL`, `EVENT_HANDLER_URL`, and `CHAIN_ID` are not set, it will connect to the AI Network testnet by default.
+
+If `AIN_PRIVATE_KEY` is not entered, only read/get operations can be performed.
+The private key can be generated through the [AIN Wallet](https://chromewebstore.google.com/detail/ain-wallet/hbdheoebpgogdkagfojahleegjfkhkpl), and it is also compatible with Ethereum private keys.
 
 ## Troubleshooting
 ### Error: Cannot find module '@modelcontextprotocol/sdk/server/stdio.js'
