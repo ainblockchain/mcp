@@ -20,9 +20,9 @@ export const addContent: ToolType<typeof parameters> = {
     try {
         const addParams: any = { ...params };
         if (params.data && typeof params.data === 'string') {
-        addParams.data = Buffer.from(params.data, 'base64'); // bytes로 변환
+            addParams.data = Buffer.from(params.data, 'base64'); // bytes
         } else {
-        delete addParams.data; // data가 없으면 undefined로 넘기지 않도록
+            delete addParams.data; // Prevent sending undefined data
         }
       const result = await dagClient.add(addParams);
       return {

@@ -46,7 +46,8 @@ Add the following to your `claude_desktop_config.json`.
         "PROVIDER_URL": "<>",
         "EVENT_HANDLER_URL": "<>",
         "CHAIN_ID": "<>",
-        "AIN_PRIVATE_KEY": "<>"
+        "AIN_PRIVATE_KEY": "<>",
+        "DAG_RPC": "<>"
       }
     }
   }

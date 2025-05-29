@@ -17,7 +17,7 @@ Sample instruction to run "mnist-train" container would be { topic: 'mnist-train
         const { dagClient } = context;
         try {
             let instruction = params.instruction;
-            // instruction이 객체면 string으로 변환
+            // Convert instruction to string if it's not already
             if (typeof instruction !== 'string') {
                 instruction = JSON.stringify(instruction);
             }
