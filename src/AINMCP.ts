@@ -4,7 +4,7 @@ import { MCP_SERVER_CONFIG } from "./config";
 import { Tools } from "./tools";
 import { ToolContext, ToolType } from "./types";
 import AIN from "@ainblockchain/ain-js";
-const AINetworkDAGClient = require('ai-network-dag-client');
+import AINetworkDAGClient from 'ai-network-dag-client';
 
 class AINMCP extends McpServer {
   private ain: AIN;

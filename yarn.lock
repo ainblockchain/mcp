@@ -812,10 +812,10 @@ acorn@7.1.1:
   resolved "https://registry.npmjs.org/acorn/-/acorn-7.1.1.tgz"
   integrity sha512-add7dgA5ppRPxCFJoAGfMDi7PIBXq1RtGo7BhbLaxwrXPOmw8gq48Y9ozT01hUKy9byMjlR20EJhu5zlkErEkg==
 
-ai-network-dag-client@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.npmjs.org/ai-network-dag-client/-/ai-network-dag-client-1.2.2.tgz"
-  integrity sha512-vhbqwaH3XC+Si7jXZLKIGHrTDBJ1gCrSrgW8e2dI7DcDhczSmskHIlaQxWP/APfcYMPN726+eevkAQgyqbM3fw==
+ai-network-dag-client@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.npmjs.org/ai-network-dag-client/-/ai-network-dag-client-1.2.5.tgz"
+  integrity sha512-oz9rR7KOAANRTaWXl4DNhtrKEDJY1wtLwuTxaqlVMBEow9lTAkcPBQbfZL/tLlmbDSXfF9MkM3566vzOK52UbA==
   dependencies:
     "@grpc/grpc-js" "^1.9.0"
     "@grpc/proto-loader" "^0.7.8"

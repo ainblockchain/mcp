@@ -22,7 +22,7 @@
   "dependencies": {
     "@ainblockchain/ain-js": "^1.13.3",
     "@modelcontextprotocol/sdk": "^1.10.1",
-    "ai-network-dag-client": "^1.2.2",
+    "ai-network-dag-client": "^1.2.5",
     "dotenv": "^16.5.0",
     "zod": "^3.24.3"
   }
