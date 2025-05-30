@@ -11,6 +11,7 @@ export const MCP_SERVER_CONFIG = {
   eventHandlerUrl: process.env.EVENT_HANDLER_URL || 'wss://testnet-api.ainetwork.ai',
   chainId: process.env.CHAIN_ID || '0',
   privateKey: process.env.AIN_PRIVATE_KEY || '',
+  dagRPC: process.env.DAG_RPC || '',
 } as const;
 
 export type ServerConfig = typeof MCP_SERVER_CONFIG;

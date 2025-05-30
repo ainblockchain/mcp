@@ -42,12 +42,13 @@ Add the following to your `claude_desktop_config.json`.
     "ainetwork": {
       "command": "node",
       "args": ["<path to dist/index.js>"],
-      "env": [
+      "env": {
         "PROVIDER_URL": "<>",
         "EVENT_HANDLER_URL": "<>",
         "CHAIN_ID": "<>",
-        "AIN_PRIVATE_KEY": "<>"
-      ]
+        "AIN_PRIVATE_KEY": "<>",
+        "DAG_RPC": "<>"
+      }
     }
   }
 }

@@ -1,8 +1,10 @@
 import { z } from "zod";
 import AIN from "@ainblockchain/ain-js";
+import { AINetworkDAGClient } from "ai-network-dag-client"
 
 export interface ToolContext {
   ain: AIN;
+  dagClient: AINetworkDAGClient
 }
 
 export interface ToolType<P extends z.ZodType> {

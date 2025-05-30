@@ -4,9 +4,11 @@ import { MCP_SERVER_CONFIG } from "./config";
 import { Tools } from "./tools";
 import { ToolContext, ToolType } from "./types";
 import AIN from "@ainblockchain/ain-js";
+import AINetworkDAGClient from 'ai-network-dag-client';
 
 class AINMCP extends McpServer {
   private ain: AIN;
+  private dagClient: any;
 
   constructor() {
     super({
@@ -18,6 +20,8 @@ class AINMCP extends McpServer {
       MCP_SERVER_CONFIG.eventHandlerUrl,
       Number(MCP_SERVER_CONFIG.chainId)
     );
+    // Create a new client instance
+    this.dagClient = new AINetworkDAGClient(MCP_SERVER_CONFIG.dagRPC);
 
     if (MCP_SERVER_CONFIG.privateKey !== "") {
       this.ain.wallet.addAndSetDefaultAccount(MCP_SERVER_CONFIG.privateKey);
@@ -27,6 +31,7 @@ class AINMCP extends McpServer {
   private getToolContext(): ToolContext {
     return {
       ain: this.ain,
+      dagClient: this.dagClient,
     }
   }
 
