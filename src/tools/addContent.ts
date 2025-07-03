@@ -18,6 +18,9 @@ export const addContent: ToolType<typeof parameters> = {
   handler: async (params: z.infer<typeof parameters>, context: ToolContext) => {
     const { dagClient } = context;
     try {
+        if (!dagClient) {
+          throw new Error("DAG RPC URL not set");
+        }
         const addParams: any = { ...params };
         if (params.data && typeof params.data === 'string') {
             addParams.data = Buffer.from(params.data, 'base64'); // bytes

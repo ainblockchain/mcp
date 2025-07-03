@@ -20,8 +20,11 @@ class AINMCP extends McpServer {
       MCP_SERVER_CONFIG.eventHandlerUrl,
       Number(MCP_SERVER_CONFIG.chainId)
     );
-    // Create a new client instance
-    this.dagClient = new AINetworkDAGClient(MCP_SERVER_CONFIG.dagRPC);
+
+    if (MCP_SERVER_CONFIG.dagRPC !== "") {
+      // Create a new client instance
+      this.dagClient = new AINetworkDAGClient(MCP_SERVER_CONFIG.dagRPC);
+    }
 
     if (MCP_SERVER_CONFIG.privateKey !== "") {
       this.ain.wallet.addAndSetDefaultAccount(MCP_SERVER_CONFIG.privateKey);
