@@ -16,6 +16,9 @@ Sample instruction to run "mnist-train" container would be { topic: 'mnist-train
     handler: async (params: z.infer<typeof parameters>, context: ToolContext) => {
         const { dagClient } = context;
         try {
+            if (!dagClient) {
+                throw new Error("DAG RPC URL not set");
+            }
             let instruction = params.instruction;
             // Convert instruction to string if it's not already
             if (typeof instruction !== 'string') {

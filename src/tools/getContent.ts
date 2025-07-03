@@ -12,6 +12,10 @@ export const getContent: ToolType<typeof parameters> = {
   handler: async (params: z.infer<typeof parameters>, context: ToolContext) => {
     const { dagClient } = context;
     try {
+      if (!dagClient) {
+        throw new Error("DAG RPC URL not set");
+      }
+
       const result = await dagClient.get(params.cid);
       return {
         content: [{ type: 'text', text: JSON.stringify(result) }],
