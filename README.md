@@ -43,11 +43,11 @@ Add the following to your `claude_desktop_config.json`.
       "command": "node",
       "args": ["<path to dist/index.js>"],
       "env": {
-        "PROVIDER_URL": "<>",
-        "EVENT_HANDLER_URL": "<>",
-        "CHAIN_ID": "<>",
-        "AIN_PRIVATE_KEY": "<>",
-        "DAG_RPC": "<>"
+        "PROVIDER_URL": "<AI_NETWORK_PROVIDER_URL>",
+        "EVENT_HANDLER_URL": "<AI_NETWORK_HANDLER_URL>",
+        "CHAIN_ID": "<AI_NETWORK_CHAIN_ID>",
+        "AIN_PRIVATE_KEY": "<YOUR_PRIVATE_KEY>",
+        "DAG_RPC": "<AI_NETWORK_DAG_RPC_URL>"
       }
     }
   }
@@ -57,6 +57,8 @@ If `PROVIDER_URL`, `EVENT_HANDLER_URL`, and `CHAIN_ID` are not set, it will conn
 
 If `AIN_PRIVATE_KEY` is not entered, only read/get operations can be performed.
 The private key can be generated through the [AIN Wallet](https://chromewebstore.google.com/detail/ain-wallet/hbdheoebpgogdkagfojahleegjfkhkpl), and it is also compatible with Ethereum private keys.
+
+If you want to utilize AI Network Layer2 DAG functionality, please add `DAG_RPC`.
 
 ## Troubleshooting
 ### Error: Cannot find module '@modelcontextprotocol/sdk/server/stdio.js'
